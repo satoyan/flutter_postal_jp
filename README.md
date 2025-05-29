@@ -22,7 +22,7 @@ A Dart package for retrieving Japanese postal address information from a postal 
 
 This package depends on the [Zip Cloud](https://zipcloud.ibsnet.co.jp/) web service.
 
-![demo](./example/example.gif)
+![demo!](https://raw.githubusercontent.com/satoyan/flutter_postal_jp/refs/heads/master/example/example.gif)
 
 ## Features
 
