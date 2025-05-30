@@ -1,3 +1,15 @@
+/// Converts the `AddressInfo` object to a map.
+///
+/// @return A map containing the data from the `AddressInfo` object.
+///   The map will have the following keys:
+///     - 'address1': The first address line.
+///     - 'address2': The second address line.
+///     - 'address3': The third address line.
+///     - 'kana1': The first address line in kana.
+///     - 'kana2': The second address line in kana.
+///     - 'kana3': The third address line in kana.
+///     - 'prefcode': The prefecture code.
+///     - 'zipcode': The postal code.
 class AddressInfo {
   AddressInfo({
     this.address1,
@@ -10,13 +22,28 @@ class AddressInfo {
     this.postalCode,
   });
 
+  /// The first address line.
   final String? address1;
+
+  /// The second address line.
   final String? address2;
+
+  /// The third address line.
   final String? address3;
+
+  /// The first address line in kana.
   final String? kana1;
+
+  /// The second address line in kana.
   final String? kana2;
+
+  /// The third address line in kana.
   final String? kana3;
+
+  /// The prefecture code.
   final String? prefcode;
+
+  /// The postal code.
   final String? postalCode;
 
   /// Creates an `AddressInfo` object from a map.

@@ -27,9 +27,14 @@ This package depends on the [Zip Cloud](https://zipcloud.ibsnet.co.jp/) web serv
 ## Features
 
 - Retrieve address information (prefecture, city, town) based on a 7-digit Japanese postal code.
+    - 7桁の日本の郵便番号から住所情報（都道府県、市区町村）を取得します。
 - Provides `PostalCodeService` to fetch data from an external API.
+    - 外部APIからデータを取得する`PostalCodeService`を提供します。
 - Returns data as `AddressInfo` objects, including Japanese address components and kana readings.
+    - 日本語の住所構成要素とかな読みを含む`AddressInfo`オブジェクトとしてデータを返します。
 - Handles API errors and returns `ApiFailure` with error messages.
+    - APIエラーを処理し、エラーメッセージとともに`ApiFailure`を返します。
+
 
 ## Getting started
 

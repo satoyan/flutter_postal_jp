@@ -4,6 +4,10 @@ import 'package:postal_jp/src/services/address_info.dart';
 import 'package:postal_jp/src/services/api_result.dart';
 import 'package:postal_jp/src/services/postal_code_api_service.dart';
 
+/// A service class to retrieve Japanese postal address information.
+///
+/// This class provides methods to fetch address details based on a 7-digit
+/// Japanese postal code, utilizing the Zip Cloud web service.
 class PostalJP {
   late final apiService = PostalCodeApiCodeService(httpClient: HttpClient());
 
@@ -16,7 +20,7 @@ class PostalJP {
   ///   postalCode (String): The postal code to search for. Must be a valid postal code format.
   ///
   /// Returns:
-  ///   Future<ApiResult<List<AddressInfo>>>: An [ApiResult] containing either a list of [AddressInfo]
+  ///   Future\<ApiResult\<List\<AddressInfo>>>: An [ApiResult] containing either a list of [AddressInfo]
   ///   objects if the postal code is found, or an error if the postal code is invalid or
   ///   the API request fails.
   Future<ApiResult<List<AddressInfo>>> getAddress({
