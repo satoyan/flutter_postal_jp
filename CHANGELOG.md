@@ -1,3 +1,14 @@
+## 1.0.3
+- Updated Dart SDK constraint to ^3.8.1
+- Updated Flutter constraint to ">=1.17.0"
+- Upgraded dev dependencies:
+  - flutter_lints to ^6.0.0
+  - mockito to ^5.4.6
+  - analyzer to ^7.4.5
+- Updated Gradle wrapper to 8.4 in the example project
+- Updated Android Gradle plugin to 8.3.0 in the example project
+- Added .mise.local.toml file with Flutter version 3.32.4
+
 ## 1.0.2
 - Update README.md
 

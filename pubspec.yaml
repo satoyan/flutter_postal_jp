@@ -1,10 +1,10 @@
 name: postal_jp
 description: "A Flutter package for searching Japan postal codes from addresses and vice versa."
-version: 1.0.2
+version: 1.0.3
 homepage: https://satoyan.net/
 
 environment:
-  sdk: ^3.6.1
+  sdk: ^3.8.1
   flutter: ">=1.17.0"
 
 dependencies:
@@ -14,10 +14,10 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^5.0.0
+  flutter_lints: ^6.0.0
   build_runner: ^2.4.15
-  mockito: ^5.4.5
-  analyzer: ^6.2.0
+  mockito: ^5.4.6
+  analyzer: ^7.4.5
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
