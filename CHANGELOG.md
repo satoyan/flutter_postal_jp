@@ -1,3 +1,7 @@
+## 1.0.4
+- Refactored API client for improved robustness and code quality.
+- Removed manual test script.
+
 ## 1.0.3
 - Updated Dart SDK constraint to ^3.8.1
 - Updated Flutter constraint to ">=1.17.0"
