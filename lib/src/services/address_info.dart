@@ -63,16 +63,29 @@ class AddressInfo {
   ///
   /// @return An `AddressInfo` object populated with the data from the map.
   factory AddressInfo.fromMap(Map<String, dynamic> map) {
-    return AddressInfo(
-      address1: map['address1'],
-      address2: map['address2'],
-      address3: map['address3'],
-      kana1: map['kana1'],
-      kana2: map['kana2'],
-      kana3: map['kana3'],
-      prefcode: map['prefcode'],
-      postalCode: map['zipcode'],
-    );
+    return switch (map) {
+      {
+        'address1': _,
+        'address2': _,
+        'address3': _,
+        'kana1': _,
+        'kana2': _,
+        'kana3': _,
+        'prefcode': _,
+        'zipcode': _,
+      } =>
+        AddressInfo(
+          address1: map['address1'],
+          address2: map['address2'],
+          address3: map['address3'],
+          kana1: map['kana1'],
+          kana2: map['kana2'],
+          kana3: map['kana3'],
+          prefcode: map['prefcode'],
+          postalCode: map['zipcode'],
+        ),
+      _ => throw Exception(''),
+    };
   }
 
   /// Converts the `AddressInfo` object to a map.
