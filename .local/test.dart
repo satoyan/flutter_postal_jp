@@ -6,9 +6,7 @@ import 'package:postal_jp/src/services/api_result.dart';
 import 'package:postal_jp/src/services/postal_code_api_service.dart';
 
 void main() async {
-  final service = PostalCodeApiCodeService(
-    httpClient: HttpClient(),
-  );
+  final service = PostalCodeApiCodeService(httpClient: HttpClient());
 
   final result = await service.getAddressFromPostalCode('0790177');
   switch (result) {
