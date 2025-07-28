@@ -13,9 +13,7 @@ class PostalCodeApiCodeService {
   /// Constructs a [PostalCodeApiCodeService].
   ///
   /// [httpClient] is the client used to make HTTP requests.
-  PostalCodeApiCodeService({
-    required this.httpClient,
-  });
+  PostalCodeApiCodeService({required this.httpClient});
 
   /// Retrieves address information based on the provided postal code.
   ///
@@ -30,7 +28,8 @@ class PostalCodeApiCodeService {
   ///     or the JSON response cannot be parsed, it returns an [ApiFailure]
   ///     with an error message and optional stack trace.
   Future<ApiResult<List<AddressInfo>>> getAddressFromPostalCode(
-      String postalCode) async {
+    String postalCode,
+  ) async {
     final url = Uri.parse('$baseUrl$postalCode');
 
     try {
@@ -39,37 +38,24 @@ class PostalCodeApiCodeService {
 
       if (response.statusCode != HttpStatus.ok) {
         return ApiResult.failure(
-            error: 'HTTP request failed with status: ${response.statusCode}');
+          error: 'HTTP request failed with status: ${response.statusCode}',
+        );
       }
 
       final responseBody = await response.transform(utf8.decoder).join();
       try {
-        // print(jsonDecode(responseBody));
         return switch (jsonDecode(responseBody)) {
-          {
-            'results': final List<dynamic> items,
-          } =>
-            ApiSuccess(items
+          {'results': final List<dynamic> items} => ApiSuccess(
+            items
                 .map<AddressInfo?>(
-                  (item) => switch (item) {
-                    {
-                      'address1': _,
-                      'address2': _,
-                      'address3': _,
-                      'kana1': _,
-                      'kana2': _,
-                      'kana3': _,
-                      'prefcode': _,
-                      'zipcode': _,
-                    } =>
-                      AddressInfo.fromMap(item as Map<String, dynamic>),
-                    _ => null,
-                  },
+                  (item) => AddressInfo.fromMap(item as Map<String, dynamic>),
                 )
                 .nonNulls
-                .toList()),
+                .toList(),
+          ),
           _ => ApiResult.failure(
-              error: 'Failed to parse JSON response with $responseBody'),
+            error: 'Failed to parse JSON response with $responseBody',
+          ),
         };
       } catch (e, s) {
         return ApiResult.failure(
@@ -78,10 +64,7 @@ class PostalCodeApiCodeService {
         );
       }
     } catch (e, s) {
-      return ApiResult.failure(
-        error: 'Failed to connect: $e',
-        stackTrace: s,
-      );
+      return ApiResult.failure(error: 'Failed to connect: $e', stackTrace: s);
     }
   }
 }
