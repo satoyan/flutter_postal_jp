@@ -1,3 +1,7 @@
+## 1.0.5
+- Corrected English in README.md.
+- Updated package description.
+
 ## 1.0.4
 - Refactored API client for improved robustness and code quality.
 - Removed manual test script.
@@ -26,4 +30,3 @@
 - Implemented `PostalCodeService` for fetching data from the Zip Cloud API.
 - Provided `AddressInfo` objects containing Japanese address components and kana readings.
 - Included error handling to return `ApiFailure` with appropriate error messages.
-

@@ -1,6 +1,6 @@
 name: postal_jp
-description: "A Flutter package for searching Japan postal codes from addresses and vice versa."
-version: 1.0.4
+description: "A Dart package for retrieving Japanese postal address information from a postal code."
+version: 1.0.5
 homepage: https://satoyan.net/
 
 environment:

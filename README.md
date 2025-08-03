@@ -18,9 +18,12 @@ and the Flutter guide for
 [![Platform Badge](https://img.shields.io/badge/platform-android%20|%20ios%20-green.svg)](https://pub.dev/packages/flutter_postal_jp)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+__I have published an alternative package that uses Japan Post Office APIs. I recommend using that instead.__
+The package is available [here](https://pub.dev/packages/japan_post_api_client).
+
 A Dart package for retrieving Japanese postal address information from a postal code. 
 
-This package depends on the [Zip Cloud](https://zipcloud.ibsnet.co.jp/) web service.
+This package utilizes the [Zip Cloud](https://zipcloud.ibsnet.co.jp/) web service.
 
 ![demo!](https://raw.githubusercontent.com/satoyan/flutter_postal_jp/refs/heads/master/example/example.gif)
 
